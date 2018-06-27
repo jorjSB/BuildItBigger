@@ -57,7 +57,7 @@ public class EndpointsAsyncTask extends AsyncTask<Pair<Context, String>, Void, S
 
     public void displayJokesUsingAndroidLibrary(String joke){
         Intent intent = new Intent(context, DisplayJokesActivity.class);
-        intent.putExtra("joke", joke);
+        intent.putExtra(DisplayJokesActivity.TAG_JOKE, joke);
         context.startActivity(intent);
     }
 }

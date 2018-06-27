@@ -9,6 +9,8 @@ import android.widget.TextView;
 
 public class DisplayJokesActivity extends AppCompatActivity {
 
+    public final static String TAG_JOKE = "joke";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,9 +20,15 @@ public class DisplayJokesActivity extends AppCompatActivity {
 
         TextView myAwesomeTextView = findViewById(R.id.textView);
 
-        String joke =  getIntent().getStringExtra("joke");
+        String joke = "";
+
+        if(getIntent().hasExtra(TAG_JOKE))
+            joke =  getIntent().getStringExtra(TAG_JOKE);
+
         if(!joke.isEmpty())
             myAwesomeTextView.setText(joke);
+        else
+            myAwesomeTextView.setText(getString(R.string.no_joke));
     }
 
     @Override

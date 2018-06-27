@@ -22,16 +22,6 @@ public class EchoAndroidTest {
 
     private Context context;
 
-//    @Test
-//    public void testVerifyAsyncTaskResponse() {
-//
-//        mContext = getContext();
-//        assertNotNull(mContext);
-//
-//        assertEquals("hello", "hello");
-//
-//    }
-
     @Test
     public void testVerifyJoke() throws InterruptedException {
         assertTrue(true);
